@@ -1,0 +1,54 @@
+<p>{{sampleText}}</p>
+<p>Student mark : {{Student}}</p>
+{{Student.name}}
+
+<input type="text" [(ngModel)]="sampleText">
+
+<h4>Movie List</h4>
+@if(movies.length>0){
+    <ul *ngFor="let movie of movies">
+        <li>{{movie}}</li>
+    </ul>
+} @else {
+    <p>No movies to display</p>
+}
+
+
+<h3>Event Binding</h3>
+<button (click)="addition()">+</button>&ensp;<h4><button>{{calculate}}</button></h4>&emsp;<button (click)="subtraction()">-</button>
+
+<!--
+<h3>*ngSwitch :</h3>
+<input type="text" [(ngModel)]="num">
+<div [ngSwitch]="num">
+    <p ngSwitchCase="1">One</p>
+</div>
+
+<input type="text" [(ngModel)]="value">
+
+<div [ngSwitch]="value">
+    <p *ngSwitchCase="'angular'">You are learning Angular!</p>
+    <p *ngSwitchCase="'react'">You are learning React!</p>
+    <p *ngSwitchCase="'vue'">You are learning Vue!</p>
+    <p *ngSwitchDefault>You are learning something else!</p>
+</div>
+-->
+
+<hr>
+
+<input type="checkbox" [(ngModel)]="showMe">
+{{showMe}}
+<p *ngIf="showMe">Show me is checked</p>
+<p *ngIf="!showMe">Show me is unchecked</p>
+
+<hr>
+
+<h3>ngClass : </h3>
+<p [ngClass]="['primary','big']">Sample text for ngClass</p>
+<p [ngClass]="{'secondary':'true','small':showMe}">Sample text for ngClass</p>
+<hr>
+
+<h3>ngStyle</h3>
+<input type="text" [(ngModel)]="color">
+<p [ngStyle]="{'font-size':'24px', 'color':status=='error'?'red':'blue'}">Sample text for ngStyle</p>
+<p [ngStyle]="{'font-size':'20px', 'color':color, 'font-weight':'bold'}">Sample text for ngStyle</p>
