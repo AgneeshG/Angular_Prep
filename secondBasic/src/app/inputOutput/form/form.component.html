@@ -1,9 +1,10 @@
-<h3>Car Form :</h3>
+<h3>Add Cars Form Page :</h3>
 
-<form action="">
-    <label for="">Enter Car Name :</label>
-    <input type="text" name="car">
-    <button (click)="addCar()">Submit</button>
+<form action="" method="post">
+    <input type=text name="carName" [(ngModel)]="carName">
+    <button (click)="addCar()">Submit</button> 
 </form>
-<br><br>
-<app-list></app-list>
+
+<!-- <br><br> -->
+
+<!-- <app-list [carName]="cars"></app-list> -->
